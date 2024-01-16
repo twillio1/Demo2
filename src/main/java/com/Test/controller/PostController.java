@@ -23,6 +23,7 @@ public class PostController {
     @PostMapping
     public ResponseEntity<?> createPost(@Valid @RequestBody PostDto postDto, BindingResult bindingResult)
     {
+        System.out.println("Subhajit Misra");
         if(bindingResult.hasErrors())
         {
            return new ResponseEntity<>(bindingResult.getFieldError().getDefaultMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
